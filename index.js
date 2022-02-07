@@ -105,6 +105,12 @@ async function getHSI(contractAddr, tokenid, hexlaunch) {
           max_value: 5555
         },
         {
+          display_type: 'number',
+          trait_type: 'HDRN Launch Bonus',
+          value: share.launchBonus / 10,
+          max_value: 10
+        },
+        {
           display_type: 'date',
           trait_type: 'Stake Start',
           value: ((share.stake.lockedDay * 86400) + (hexlaunch.getTime() / 1000))
