@@ -4,3 +4,6 @@
 # General
 node_modules
 package-lock.json
+
+#Hedron API
+secrets.js

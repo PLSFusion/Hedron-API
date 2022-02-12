@@ -10,7 +10,9 @@
   "license": "MIT",
   "dependencies": {
     "ethers": "^5.5.4",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "express-winston": "^4.2.0",
+    "winston": "^3.6.0"
   },
   "devDependencies": {
     "eslint": "^8.8.0"

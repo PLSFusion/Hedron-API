@@ -1,6 +1,12 @@
+const hedronLaunch = {
+  ethereum: new Date(1645833600 * 1000),
+  pulsechain: new Date(1645833600 * 1000),
+  pulsechaintestnet: new Date(1575331200 * 1000),
+};
+
 const hedronAddr = {
-  ethereum: '0xDC11f7E700A4c898AE5CAddB1082cFfa76512aDD',
-  pulsechain: '0xDC11f7E700A4c898AE5CAddB1082cFfa76512aDD',
+  ethereum: '0x9bE54759A6b2Ac59F342562013Dfa7E38AAaCC36',
+  pulsechain: '0x9bE54759A6b2Ac59F342562013Dfa7E38AAaCC36',
   pulsechaintestnet: '0xDC11f7E700A4c898AE5CAddB1082cFfa76512aDD'
 };
 
@@ -1022,6 +1028,7 @@ const hedronABI = [
 ];
   
 module.exports = {
+  hedronLaunch: hedronLaunch,
   hedronAddr: hedronAddr,
   hedronABI: hedronABI
 };

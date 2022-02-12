@@ -1,6 +1,6 @@
 const hsimAddr = {
-  ethereum: '0xD6CcB4Cfb12893d8090ACf4205FEDda604B50691',
-  pulsechain: '0xD6CcB4Cfb12893d8090ACf4205FEDda604B50691',
+  ethereum: '0xd1eFD5ffF5E21df5D0f4fa58fFEDCc7315AA3780',
+  pulsechain: '0xd1eFD5ffF5E21df5D0f4fa58fFEDCc7315AA3780',
   pulsechaintestnet: '0xD6CcB4Cfb12893d8090ACf4205FEDda604B50691'
 };
 
