@@ -1,7 +1,8 @@
 const ethers  = require('ethers');
 const express = require('express');
 
-const hsi = require('./requests/hsi');
+const hsi       = require('./requests/hsi');
+const tokenList = require('./requests/tokenList');
 
 const {hsimAddr}  = require('./abi/hsim');
 const {hexLaunch} = require('./abi/hex');
@@ -53,6 +54,10 @@ router.get('/:chainId(\\d+)/hsi/:tokenId(\\d+$)', async (req, res) => {
     };
   }
   res.json(response);
+});
+
+router.get('/token-list', async (req, res) => {
+  res.json(tokenList.get());
 });
 
 module.exports = router;
