@@ -2,12 +2,15 @@ const express        = require('express');
 const expressWinston = require('express-winston');
 const router         = require('./router');
 const winston        = require('winston');
+const cors           = require('cors');
 
 let app = express();
 
 const logFormat = winston.format.printf(({ level, message, timestamp }) => {
   return `${timestamp} ${level}: ${message}`;
 });
+
+app.use(cors());
 
 app.use(expressWinston.logger({
   transports: [

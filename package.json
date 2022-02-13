@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "ethers": "^5.5.4",
     "express": "^4.17.2",
     "express-winston": "^4.2.0",
