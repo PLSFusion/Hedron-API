@@ -31,10 +31,10 @@ async function get(provider, contract, hexLaunch, tokenId,) {
     return {
       description: 'This NFT represents a stake within the HEX protocol which has been encapsulated by the Hedron protocol. The owner of this NFT may redeem this NFT for the underlying HEX stake at any time.',
       external_url: 'https://hedron.pro/#/dapp',
-      image: 'https://hedron.pro/img/hsi/nft.png',
+      image: 'https://hedron.pro/img/token/hsi/nft.png',
       // image_data: '',
       // background_color: '',
-      animation_url: 'https://hedron.pro/media/hsi/nft.mp4',
+      animation_url: 'https://hedron.pro/img/token/hsi/nft.mp4',
       // youtube_url: '',
       name: 'HEX Stake - ' + (Math.floor(ethers.utils.formatUnits(share.stake.stakeShares, 10)) / 100) + ' T-Shares - ' + servedDays + ' / ' + share.stake.stakedDays + ' Days Served',
       attributes : [
