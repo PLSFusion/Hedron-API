@@ -25,7 +25,7 @@ function get () {
       },
       {
         chainId: 1,
-        address: '0x9bE54759A6b2Ac59F342562013Dfa7E38AAaCC36',
+        address: '0x3819f64f282bf135d62168C1e513280dAF905e06',
         name: 'Hedron',
         symbol: 'HDRN',
         decimals: 9,

@@ -2,13 +2,15 @@ const hsiABI = [
   {
     'inputs': [
       {
-        'internalType': 'address',
-        'name': 'hexAddress',
-        'type': 'address'
+        'internalType': 'uint256',
+        'name': 'stakeLength',
+        'type': 'uint256'
       }
     ],
+    'name': 'create',
+    'outputs': [],
     'stateMutability': 'nonpayable',
-    'type': 'constructor'
+    'type': 'function'
   },
   {
     'inputs': [],
@@ -27,9 +29,9 @@ const hsiABI = [
   {
     'inputs': [
       {
-        'internalType': 'uint256',
-        'name': 'stakeLength',
-        'type': 'uint256'
+        'internalType': 'address',
+        'name': 'hexAddress',
+        'type': 'address'
       }
     ],
     'name': 'initialize',
@@ -232,19 +234,6 @@ const hsiABI = [
     'name': 'update',
     'outputs': [],
     'stateMutability': 'nonpayable',
-    'type': 'function'
-  },
-  {
-    'inputs': [],
-    'name': 'whoami',
-    'outputs': [
-      {
-        'internalType': 'address',
-        'name': '',
-        'type': 'address'
-      }
-    ],
-    'stateMutability': 'view',
     'type': 'function'
   }
 ];

@@ -5,8 +5,8 @@ const hedronLaunch = {
 };
 
 const hedronAddr = {
-  ethereum: '0x9bE54759A6b2Ac59F342562013Dfa7E38AAaCC36',
-  pulsechain: '0x9bE54759A6b2Ac59F342562013Dfa7E38AAaCC36',
+  ethereum: '0x3819f64f282bf135d62168C1e513280dAF905e06',
+  pulsechain: '0x3819f64f282bf135d62168C1e513280dAF905e06',
   pulsechaintestnet: '0xDC11f7E700A4c898AE5CAddB1082cFfa76512aDD'
 };
 
@@ -475,6 +475,19 @@ const hedronABI = [
       }
     ],
     'stateMutability': 'nonpayable',
+    'type': 'function'
+  },
+  {
+    'inputs': [],
+    'name': 'currentDay',
+    'outputs': [
+      {
+        'internalType': 'uint256',
+        'name': '',
+        'type': 'uint256'
+      }
+    ],
+    'stateMutability': 'view',
     'type': 'function'
   },
   {

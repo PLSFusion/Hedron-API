@@ -1,6 +1,6 @@
 const hsimAddr = {
-  ethereum: '0xd1eFD5ffF5E21df5D0f4fa58fFEDCc7315AA3780',
-  pulsechain: '0xd1eFD5ffF5E21df5D0f4fa58fFEDCc7315AA3780',
+  ethereum: '0x8BD3d1472A656e312E94fB1BbdD599B8C51D18e3',
+  pulsechain: '0x8BD3d1472A656e312E94fB1BbdD599B8C51D18e3',
   pulsechaintestnet: '0xD6CcB4Cfb12893d8090ACf4205FEDda604B50691'
 };
 
@@ -1000,19 +1000,6 @@ const hsimABI = [
     'name': 'transferFrom',
     'outputs': [],
     'stateMutability': 'nonpayable',
-    'type': 'function'
-  },
-  {
-    'inputs': [],
-    'name': 'whoami',
-    'outputs': [
-      {
-        'internalType': 'address',
-        'name': '',
-        'type': 'address'
-      }
-    ],
-    'stateMutability': 'view',
     'type': 'function'
   }
 ];
