@@ -40,40 +40,48 @@ async function get(provider, contract, hexLaunch, tokenId,) {
       attributes : [
   
         {
+          key: 'T-Shares',
           trait_type: 'T-Shares',
           value: Math.floor(ethers.utils.formatUnits(share.stake.stakeShares, 10)) / 100
         },
         {
+          key: 'HEX Staked',
           trait_type: 'HEX Staked',
           value: Math.floor(ethers.utils.formatUnits(stake.stakedHearts, 6)) / 100
         },
         {
+          key: 'HDRN Mintable',
           trait_type: 'HDRN Mintable',
           value: Math.floor(ethers.utils.formatUnits(mintableHDRN, 7)) / 100
         },
         {
+          key: 'Days Served',
           display_type: 'boost_percentage',
           trait_type: 'Days Served',
           value: Math.floor((servedDays / share.stake.stakedDays) * 100)
         },
         {
+          key: 'HDRN Minted',
           display_type: 'boost_percentage',
           trait_type: 'HDRN Minted',
           value: Math.floor((share.mintedDays / share.stake.stakedDays) * 100)
         },
         {
+          key: 'Days Staked',
           display_type: 'number',
           trait_type: 'Days Staked',
           value: share.stake.stakedDays,
           max_value: 5555
         },
         {
+          key: 'HDRN Launch Bonus',
           display_type: 'number',
           trait_type: 'HDRN Launch Bonus',
           value: share.launchBonus / 10,
           max_value: 10
         },
         {
+          key: 'Stake Start',
           display_type: 'date',
           trait_type: 'Stake Start',
           value: ((share.stake.lockedDay * 86400) + (hexLaunch.getTime() / 1000))
