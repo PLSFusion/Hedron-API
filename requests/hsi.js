@@ -22,15 +22,22 @@ async function get(provider, contract, hexLaunch, tokenId,) {
       servedDays = share.stake.stakedDays;
     }
 
+    let mintableDays;
+    let mintableHDRN;
+
     if (servedDays < 0) {
       servedDays = 0;
+      mintableDays = 0;
+      mintableHDRN = 0;
     }
-  
-    let mintableDays = servedDays - share.mintedDays;
-    let mintableHDRN = share.stake.stakeShares.mul(mintableDays);
-    mintableHDRN = mintableHDRN.add(
-      mintableHDRN.mul(share.launchBonus).div(10)
-    );
+
+    else {
+      mintableDays = servedDays - share.mintedDays;
+      mintableHDRN = share.stake.stakeShares.mul(mintableDays);
+      mintableHDRN = mintableHDRN.add(
+        mintableHDRN.mul(share.launchBonus).div(10)
+      );
+    }
   
     return {
       description: 'This NFT represents a stake within the HEX protocol which has been encapsulated by the Hedron protocol. The owner of this NFT may redeem this NFT for the underlying HEX stake at any time.',
