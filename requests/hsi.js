@@ -21,6 +21,10 @@ async function get(provider, contract, hexLaunch, tokenId,) {
     if (servedDays > share.stake.stakedDays) {
       servedDays = share.stake.stakedDays;
     }
+
+    if (servedDays < 0) {
+      servedDays = 0;
+    }
   
     let mintableDays = servedDays - share.mintedDays;
     let mintableHDRN = share.stake.stakeShares.mul(mintableDays);
