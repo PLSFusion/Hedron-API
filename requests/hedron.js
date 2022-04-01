@@ -7,9 +7,7 @@ async function getTotalSupply(provider, contract) {
 
   let totalSupply = await hedron.totalSupply();
 
-  return {
-    HDRNTotalSupply: ethers.utils.formatUnits(totalSupply, 9),
-  };
+  return ethers.utils.formatUnits(totalSupply, 9);
 }
 
 async function getCirculatingSupply(provider, contract) {
@@ -19,9 +17,7 @@ async function getCirculatingSupply(provider, contract) {
   let saBalance = await hedron.balanceOf('0x9d73ced2e36c89e5d167151809eee218a189f801');
   let totalSupply = await hedron.totalSupply();
   
-  return {
-    HDRNCirculatingSupply: ethers.utils.formatUnits(totalSupply.sub(saBalance), 9),
-  };
+  return ethers.utils.formatUnits(totalSupply.sub(saBalance), 9);
 }
 
 exports.getTotalSupply = getTotalSupply;

@@ -50,7 +50,7 @@ router.get('/:chainId(\\d+)/hdrn/totalSupply', async (req, res) => {
       error: 'invalid chain id',
     };
   }
-  res.json(response);
+  res.set('Content-Type', 'text/plain').send(response);
 });
 
 // HDRN Circulating Supply
@@ -81,7 +81,7 @@ router.get('/:chainId(\\d+)/hdrn/circulatingSupply', async (req, res) => {
       error: 'invalid chain id',
     };
   }
-  res.json(response);
+  res.set('Content-Type', 'text/plain').send(response);
 });
 
 // HSI Stats
