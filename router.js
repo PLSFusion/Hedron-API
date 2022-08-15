@@ -4,10 +4,12 @@ const express = require('express');
 const hedron    = require('./requests/hedron');
 const hsi       = require('./requests/hsi');
 const tokenList = require('./requests/tokenList');
+const waatsa    = require('./requests/waatsa');
 
 const {hedronAddr}  = require('./abi/hedron');
 const {hsimAddr}  = require('./abi/hsim');
 const {hexLaunch} = require('./abi/hex');
+const {waatsaAddr} = require('./abi/waatsa');
 
 const {infuraProject} = require('./secrets');
 
@@ -110,6 +112,40 @@ router.get('/:chainId(\\d+)/hsi/:tokenId(\\d+$)', async (req, res) => {
       provider.pulseChainTestnet,
       hsimAddr.pulsechaintestnet,
       hexLaunch.pulsechaintestnet,
+      req.params.tokenId
+    );
+    break;
+  default:
+    response = {
+      error: 'invalid chain id',
+    };
+  }
+  res.json(response);
+});
+
+// WAATSA Stats
+router.get('/:chainId(\\d+)/waatsa/:tokenId(\\d+$)', async (req, res) => {
+  let response;
+  
+  switch (req.params.chainId) {
+  case '1':
+    response = await waatsa.get(
+      provider.ethereum,
+      waatsaAddr.ethereum,
+      req.params.tokenId
+    );
+    break;
+  case '369':
+    response = await waatsa.get(
+      provider.pulseChain,
+      waatsaAddr.pulsechain,
+      req.params.tokenId
+    );
+    break;
+  case '940':
+    response = await waatsa.get(
+      provider.pulseChainTestnet,
+      waatsaAddr.pulsechaintestnet,
       req.params.tokenId
     );
     break;
