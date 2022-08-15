@@ -9,7 +9,9 @@ const waatsa    = require('./requests/waatsa');
 const {hedronAddr}  = require('./abi/hedron');
 const {hsimAddr}  = require('./abi/hsim');
 const {hexLaunch} = require('./abi/hex');
+const {icosaAddr} = require('./abi/icosa');
 const {waatsaAddr} = require('./abi/waatsa');
+
 
 const {infuraProject} = require('./secrets');
 
@@ -131,21 +133,21 @@ router.get('/:chainId(\\d+)/waatsa/:tokenId(\\d+$)', async (req, res) => {
   case '1':
     response = await waatsa.get(
       provider.ethereum,
-      waatsaAddr.ethereum,
+      icosaAddr.ethereum,
       req.params.tokenId
     );
     break;
   case '369':
     response = await waatsa.get(
       provider.pulseChain,
-      waatsaAddr.pulsechain,
+      icosaAddr.pulsechain,
       req.params.tokenId
     );
     break;
   case '940':
     response = await waatsa.get(
       provider.pulseChainTestnet,
-      waatsaAddr.pulsechaintestnet,
+      icosaAddr.pulsechaintestnet,
       req.params.tokenId
     );
     break;
